@@ -5,14 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Esercitazione Vue Hello</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <div id="root">
 
-        <h1>{{message}}</h1>
+        <header>
+            <h1>{{message}}</h1>
+            <h2>{{issue}}</h2>
+            <h3>{{releaseDate}}</h3>
+        </header>
 
-        <img v-bind:src="image">
+        <section>
+            <div class="cover-container">
+                <img v-bind:src="image">
+            </div>
+        </section>
+
+        <div class="credit-box">
+            <p><span>Data sulla cover:</span> {{coverDate}}</p>
+            <p><span>Autore:</span> {{writer}}</p>
+            <p><span>Disegnatore:</span> {{penciler}}</p>
+            <p><span>Chine:</span> {{inker}}</p>
+            <p><span>Lettering:</span> {{letterer}}</p>
+            <p><span>Redattore:</span> {{editor}}</p>
+        </div>
         
     </div>
     
